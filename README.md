@@ -88,7 +88,8 @@ item.getBarcode().charAt(0) == '0'
 8. (new Item("PS4", "1415161718", 280, 0.0f)) - F F F - Niedenen uslov ne e ipolnet, odnosno cenata ne e pogolema od 300, nema popust i nema 0 vo barkodot.
 
 
-6. Objasnuvanje za unit testovite
+
+    6. Objasnuvanje za unit testovite
     testNullItems:
         Ovaa test funkcija go testira slucajot koga listata na predmeti e null. 
         Ocekuva metodot checkCart da frli RuntimeException so poraka "allItems list can't be null!". 

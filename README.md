@@ -1,6 +1,7 @@
 Damir Bacevac 223026
 
 ![alt text](image.png)
+
 2. SLikata za CFG e dodadena.
 
 3. Na crtezot dokolku gi izdvojam jazlite za for ciklus (gi dodavav za polesno vizuelno predstavuvanje na ciklusite a toa se 4) imam 18 jazli i 26 rebra sto znaci deka spored formulata 26-18+2 = 10. Ciklomatskata kompleksnost iznesuva 10.

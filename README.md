@@ -89,7 +89,8 @@ item.getBarcode().charAt(0) == '0'
 
 
 
-    6. Objasnuvanje za unit testovite
+ 6. Objasnuvanje za unit testovite
+       
     testNullItems:
         Ovaa test funkcija go testira slucajot koga listata na predmeti e null. 
         Ocekuva metodot checkCart da frli RuntimeException so poraka "allItems list can't be null!". 

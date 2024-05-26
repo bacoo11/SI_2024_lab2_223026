@@ -53,9 +53,13 @@ Ovoj test slucaj go testira if-else delot na krajot od kodot kade vrakja false (
 
 5. Spored Multiple Condition kriteriumot, treba da gi razgledame site mozni kombinacii na vistinitost i na laznost na poedinecnite uslovi na slozeniot uslov.
 Trite poedinecni uslovi se:
+
 item.getPrice() > 300
+
 item.getDiscount() > 0
+
 item.getBarcode().charAt(0) == '0'
+
 1. (new Item("Item1", "0123456789", 400, 0.1f)) - T T T - Site tri uslovi se tocni, testot e uspesen.
 
 2. (new Item("PC", "1121231231", 800, 0.3f)) - T T F - Posledniot uslov ne e tocen i nema da imame popust od 30 poradi nemanje 0 vo barkodot.
@@ -71,3 +75,4 @@ item.getBarcode().charAt(0) == '0'
 7. (new Item("Xbox", "0123456789", 250, 0.0f)) - F F T - Prvite dva uslovi ne se tocni, cenata i popustot ne se zadovolitelni.
 
 8. (new Item("PS4", "1415161718", 280, 0.0f)) - F F F - Niedenen uslov ne e ipolnet, odnosno cenata ne e pogolema od 300, nema popust i nema 0 vo barkodot.
+

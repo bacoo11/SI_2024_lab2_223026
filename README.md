@@ -77,3 +77,20 @@ item.getBarcode().charAt(0) == '0'
 
 8. (new Item("PS4", "1415161718", 280, 0.0f)) - F F F - Niedenen uslov ne e ipolnet, odnosno cenata ne e pogolema od 300, nema popust i nema 0 vo barkodot.
 
+
+6. Objasnuvanje za unit testovite
+    testNullItems:
+        Ovaa test funkcija go testira slucajot koga listata na predmeti e null. 
+        Ocekuva metodot checkCart da frli RuntimeException so poraka "allItems list can't be null!". 
+        Koristi assertThrows za da proveri dali se frla ocekuvaniot isklucok.
+        
+
+    testValidItems:
+    Ovaa test funkcija go testira metodot checkCart so razlicni validni predmeti.
+    Kreira lista na predmeti so razlicni scenarija i toa:
+        Predmet so validno ime, barkod i bez popust;
+        Predmet so prazno ime, validen barkod i bez popust;
+        Predmet so validno ime, barkod i popust;
+        Predmet so validen barkod koj zapocnuva so '0', popust i cena nad 300.
+    Prvo so assert se proveruva dali vkupnata suma e pomala ili ednakva na sumata za plakjanje (2500).
+    Potoa ja menuva vrednosta na plakjanjeto na 100 za da testira negativen slucaj, koristejki assertFalse.

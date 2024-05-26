@@ -53,22 +53,25 @@ Ovoj test slucaj go testira if-else delot na krajot od kodot kade vrakja false (
 
 5. Spored Multiple Condition kriteriumot, treba da gi razgledame site mozni kombinacii na vistinitost i na laznost na poedinecnite uslovi na slozeniot uslov.
 Trite poedinecni uslovi se:
+
 item.getPrice() > 300
+
 item.getDiscount() > 0
+
 item.getBarcode().charAt(0) == '0'
-1.allItems.add(new Item("Item1", "0123456789", 400, 0.1f))
-- T T T - Site tri uslovi se tocni, testot e uspesen.
-2.allItems.add(new Item("Item1", "1123456789", 400, 0.1f))
-  - T T F - Posledniot uslov ne e tocen i nema da imame popust od 30 poradi nemanje 0 vo barkodot.
-3.allItems.add(new Item("Item1", "0123456789", 400, 0.0f))
-- T F T - Vtoriot uslov ne e ispolnet bidejki popustot e 0.
-4.allItems.add(new Item("Item1", "1123456789", 400, 0.0f))
-  - T F F - Vtoriot i tretiot uslov se neispolneti poradi barkodot i nemanjeto popust.
-5.allItems.add(new Item("Item1", "0123456789", 200, 0.1f))
-- F T T - Prviot uslov e neispolnet, cenata e pomala od 300.
-6.allItems.add(new Item("Item1", "1123456789", 200, 0.1f))
-  - F T F - Prviot uslov, cenata ne e pogolema od 300 i tretiot barkodot ne pocnuva so 0.
-7.allItems.add(new Item("Item1", "0123456789", 200, 0.0f))
-- F F T - Prvite dva uslovi ne se tocni, cenata i popustot ne se zadovolitelni.
-8.allItems.add(new Item("Item1", "1123456789", 200, 0.0f))
-  - F F F - Niedenen uslov ne e ipolnet, odnosno cenata ne e pogolema od 300, nema popust i nema 0 vo barkodot.
+
+1.allItems.add(new Item("Item1", "0123456789", 400, 0.1f)) - T T T - Site tri uslovi se tocni, testot e uspesen.
+
+2.allItems.add(new Item("Item1", "1123456789", 400, 0.1f)) - T T F - Posledniot uslov ne e tocen i nema da imame popust od 30 poradi nemanje 0 vo barkodot.
+
+3.allItems.add(new Item("Item1", "0123456789", 400, 0.0f)) - T F T - Vtoriot uslov ne e ispolnet bidejki popustot e 0.
+
+4.allItems.add(new Item("Item1", "1123456789", 400, 0.0f)) - T F F - Vtoriot i tretiot uslov se neispolneti poradi barkodot i nemanjeto popust.
+
+5.allItems.add(new Item("Item1", "0123456789", 200, 0.1f)) - F T T - Prviot uslov e neispolnet, cenata e pomala od 300.
+
+6.allItems.add(new Item("Item1", "1123456789", 200, 0.1f)) - F T F - Prviot uslov, cenata ne e pogolema od 300 i tretiot barkodot ne pocnuva so 0.
+
+7.allItems.add(new Item("Item1", "0123456789", 200, 0.0f)) - F F T - Prvite dva uslovi ne se tocni, cenata i popustot ne se zadovolitelni.
+
+8.allItems.add(new Item("Item1", "1123456789", 200, 0.0f)) - F F F - Niedenen uslov ne e ipolnet, odnosno cenata ne e pogolema od 300, nema popust i nema 0 vo barkodot.

@@ -7,49 +7,59 @@ Damir Bacevac 223026
 3. Na crtezot dokolku gi izdvojam jazlite za for ciklus (gi dodavav za polesno vizuelno predstavuvanje na ciklusite a toa se 4) imam 18 jazli i 26 rebra sto znaci deka spored formulata 26-18+2 = 10. Ciklomatskata kompleksnost iznesuva 10.
 
 4. Every Branch kriteriumot, bara da gi ispitame site mozni granki na izvrsuvanje na kodot. Za taa cel, treba da kreirame test primeri koi kje gi pokrivaat site uslovi i granki vo porgramata, za osiguruvanje na kvalitetot na porgramata.
+
 Test slucaj koga listata allItems e null:
 List<Item> allItems = null;
 int payment = 100;
-Ovoj test slucaj kje go pokrie uslovot na grankata A i kje proveri dali prgramata kje frli RuntimeException.
+
+-Ovoj test slucaj kje go pokrie uslovot na grankata A i kje proveri dali prgramata kje frli RuntimeException.
 
 Test slucaj koga listata allItems e prazna:
 List<Item> allItems = new ArrayList<>();
-Ovoj test slucaj go pokriva delot od kodot koga ima ciklus i se pominuva/proeveruva sekoj element vo allItems (granka C).
+
+-Ovoj test slucaj go pokriva delot od kodot koga ima ciklus i se pominuva/proeveruva sekoj element vo allItems (granka C).
 
 Test slucaj koga se podeseni site vlezni argumenti za objektot Item vo listata allItems:
 List<Item> allItems = new ArrayList<>();
 allItems.add(new Item("Item1", "123456789", 100, 0.1f));
-Ovoj test slucaj kje go pomine delot od kodot koj go vcituva objektot Item (granki D i F).
+
+-Ovoj test slucaj kje go pomine delot od kodot koj go vcituva objektot Item (granki D i F).
 
 Test slucaj koga name e null ili prazen strign:
 allItems.add(new Item(null, "123456789", 100, 0.1f));
-Ovoj test slucajgo pokriva delot za postavuvanje na imeto na predmetot/stavkata (granki D i E).
+
+-Ovoj test slucajgo pokriva delot za postavuvanje na imeto na predmetot/stavkata (granki D i E).
 
 Test slucaj koga barcode e null:
 List<Item> allItems = new ArrayList<>();
 allItems.add(new Item("Item1", null, 100, 0.1f));
 int payment = 100;
-Ovoj test slucaj go testira delot koga frla RuntimeException poradi nedostasuvanje na barkod (granki F i M).
+
+-Ovoj test slucaj go testira delot koga frla RuntimeException poradi nedostasuvanje na barkod (granki F i M).
 
 Test slucaj koga barcode ime nevaliden karakter:
 allItems.add(new Item("Item1", "12345a789", 100, 0.1f));
-Ovoj test slucaj ќе го помине делот од кодот кога фрла RuntimeException поради невалиден карактер во баркодот (гранка G и I).
+
+-Ovoj test slucaj ќе го помине делот од кодот кога фрла RuntimeException поради невалиден карактер во баркодот (гранка G и I).
 
 Test slucaj koga price e pogolemo od 300, ima popust i pocetokot na barcode e '0':
 allItems.add(new Item("Item1", "0123456789", 400, 0.1f));
-Ovoj test slucaj kje go pomine delot vo koj sumata se namaluva za 30 (granki N i O).
+
+-Ovoj test slucaj kje go pomine delot vo koj sumata se namaluva za 30 (granki N i O).
 
 Test slucaj koga sumata e pomala ili ednakva na plakjanjeto:
 allItems.add(new Item("Item1", "123456789", 50, 0.1f));
 allItems.add(new Item("Item2", "123456789", 40, 0.2f));
 int payment = 100;
-Ovoj test slucaj go pokriva zavrsniot uslov i del od kodot koga vrakja true (granki P i Q).
+
+-Ovoj test slucaj go pokriva zavrsniot uslov i del od kodot koga vrakja true (granki P i Q).
 
 Test slucaj koga sumata e pogolema od plakjanjeto:
 allItems.add(new Item("Item1", "123456789", 100, 0.1f));
 allItems.add(new Item("Item2", "123456789", 200, 0.2f));
 int payment = 20;
-Ovoj test slucaj go testira if-else delot na krajot od kodot kade vrakja false (granki P i R).
+
+-Ovoj test slucaj go testira if-else delot na krajot od kodot kade vrakja false (granki P i R).
 
 
 5. Spored Multiple Condition kriteriumot, treba da gi razgledame site mozni kombinacii na vistinitost i na laznost na poedinecnite uslovi na slozeniot uslov.
